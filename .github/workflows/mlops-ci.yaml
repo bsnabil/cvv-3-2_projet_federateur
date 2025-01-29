@@ -28,6 +28,7 @@ jobs:
 
     - name: Build Docker image
       run: |
+        cd python-app
         docker build \
           --build-arg MLFLOW_TRACKING_URI=${{ secrets.MLFLOW_TRACKING_URI }} \
           --build-arg MLFLOW_EXPERIMENT_NAME=${{ secrets.MLFLOW_EXPERIMENT_NAME }} \
